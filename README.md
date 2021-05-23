@@ -1,4 +1,4 @@
-A Case Study on Co-Analyzing Interview Data with Natural Language Processing.
+## A Case Study on Co-Analyzing Interview Data with Natural Language Processing.
 This repository contains the code for the analysis in a Master Thesis at Cognitive Science: 
 
 A New Mixed Method: A Case Study on Co-Analyzing Interview Data with Natural Language Processing.
