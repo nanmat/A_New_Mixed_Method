@@ -75,7 +75,7 @@ for i,j in zip(n_seed, tc):
 ###### FINAL COREX MODEL: 32 topics and seed=4 (12.840217410847965 tc)
 # run the model
 corex_model = ct.Corex(n_hidden=32, seed=4)  # Define the number of latent (hidden) topics to use
-corex_model.fit(doc_word, words=words, docs=docs) # gives the company
+corex_model.fit(doc_word, words=words, docs=docs) # docs=docs, the paragraphs can be accessed afterwards
 
 # plot the total correlation for the model with 32 topics
 os.chdir('/plots')
@@ -104,11 +104,11 @@ topic_model = cPickle.load(open('corex_model_32.pkl', 'rb'))
 
 # Anchor the lists of words 
 anchor_frequentkeywords = [[],[],[]] # add most frequent keywords. each list inside correspond to one topic
-
 anchor_domainknowledge = [[,],[,],[,]] # add domain knowledge keywords. 
 
 # anchor strength above 1, 1.5-3 nudge the words into the topic, above 5 stronly enforces to find topics with the words
-# keeping the same number of topics as in the CorEx - 32
+# keeping the same number of topics as in the CorEx: 32
+
 # TEST FOR OPTIMAL SEED VALUE
 n_seed = [1,2,3,4,5,6,7,8,9,10]
 tc = []
